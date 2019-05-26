@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Route from 'react-router-dom/Route'
+import MainLayout from './Layout/MainLayout';
+import TestLayout from './Layout/TestLayout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      layout: "mainLayout"
+    };
+  }
+
+  render(){
+    return (
+      <div className="App">
+        {
+          ((self)=>{
+            let layoutArray = [];
+            switch (self.state.layout) {
+              case "mainLayout":
+                layoutArray.push(
+                  <MainLayout/>
+                )
+                break;
+              case "testLayout":
+                layoutArray.push(
+                  <TestLayout/>
+                )
+                break;
+              default:
+
+            }
+            return layoutArray;
+          })(this)
+        }
+      </div>
+    );
+  }
 }
 
 export default App;

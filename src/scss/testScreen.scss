@@ -1,0 +1,84 @@
+.testContener{
+  .appBarShift{
+    width: calc(100% - 310px);
+    transition: width 5s ease-0ut;
+    margin-right: 280px;
+  }
+  .drawer{
+    width: 280px;
+  }
+  .drawerHeader{
+    width: 280px;
+  }
+
+.questionNumber{
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-between;
+  &.indicator{
+    font-size: 12px;
+  }
+  .numBox{
+    cursor: pointer;
+  }
+  .answered{
+    border: 1px solid #4fae61;
+    background-color: #4fae61;
+    display: inline-block;
+    width: 26px;
+    text-align: center;
+    line-height: 21px;
+    border-radius: 20px 20px 0 0;
+    margin: 5px;
+    color: #fff;
+  }
+  .marked{
+    border: 1px solid #9b59b6;
+    background-color: #9b59b6;
+    display: inline-block;
+    width: 26px;
+    text-align: center;
+    line-height: 21px;
+    border-radius: 20px 20px 20px 20px;
+    margin: 5px;
+    color: #fff;
+  }
+  .notVisited{
+    border: 1px solid #333333;
+    background-color: #ffffff;
+    display: inline-block;
+    width: 26px;
+    text-align: center;
+    line-height: 21px;
+    margin: 5px;
+  }
+  .markedAnswered{
+    border: 1px solid #9b59b6;
+    background-color: #9b59b6;
+    display: inline-block;
+    width: 26px;
+    text-align: center;
+    line-height: 21px;
+    border-radius: 20px 20px 20px 20px;
+    margin: 5px;
+    color: #fff;
+  }
+  .notAnswer{
+    border: 1px solid #c0392a;
+    background-color: #c0392a;
+    display: inline-block;
+    width: 26px;
+    text-align: center;
+    line-height: 21px;
+    border-radius: 0 0 20px 20px ;
+    margin: 5px;
+    color: #fff;
+  }
+  .active{
+    border-radius: 30px 30px 30px 30px;
+  }
+}
+
+}
