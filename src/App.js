@@ -1,24 +1,18 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
-import Route from 'react-router-dom/Route'
+// import {BrowserRouter as Router} from 'react-router-dom';
+// import Route from 'react-router-dom/Route'
 import MainLayout from './Layout/MainLayout';
 import TestLayout from './Layout/TestLayout';
+import { connect } from 'react-redux';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      layout: "mainLayout"
-    };
-  }
-
   render(){
     return (
       <div className="App">
         {
           ((self)=>{
             let layoutArray = [];
-            switch (self.state.layout) {
+            switch (self.props.layout) {
               case "mainLayout":
                 layoutArray.push(
                   <MainLayout/>
@@ -40,4 +34,16 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return{
+    layout: state.activeLayOut
+  }
+}
+
+const mapDispachToProps = (dispach) => {
+  return{
+    layoutChange: () => dispach({type: 'layoutChange'})
+  }
+}
+
+export default connect(mapStateToProps,mapDispachToProps)(App);

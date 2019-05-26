@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import TestScreen from './../Pages/TestScreen'
+import MainContent from './../Route/Routeing';
 class TestLayout extends React.Component {
   render(){
     return(
@@ -29,7 +29,7 @@ class TestLayout extends React.Component {
             </Grid>
           </Grid>
         </AppBar>
-        <TestScreen/>
+        <MainContent/>
       </React.Fragment>
     )
   }

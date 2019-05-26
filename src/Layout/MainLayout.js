@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Navigator from './../Components/Navigator';
 import Header from './../Components/Header';
 
-import Ant from './../Route/Routeing';
+import MainContent from './../Route/Routeing';
 
-import {BrowserRouter as Router} from 'react-router-dom';
-import Route from 'react-router-dom/Route';
+// import {BrowserRouter as Router} from 'react-router-dom';
+// import Route from 'react-router-dom/Route';
 
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -185,7 +185,7 @@ class MainLayout extends React.Component {
           <div className={classes.appContent}>
             <Header onDrawerToggle={this.handleDrawerToggle} />
             <main className={classes.mainContent}>
-              <Ant/>
+              <MainContent/>
             </main>
           </div>
         </div>
